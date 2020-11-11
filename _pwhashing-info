@@ -4,3 +4,6 @@ $1 - MD5
 $2 - Blowfish
 $5 - SHA-256
 $6 - SHA-512
+
+username:$1$5ZeTfMh0$18JdoauJFoaojfoajofOJ:15155:0:99999:7:::
+UI        SALT       HASH                   
