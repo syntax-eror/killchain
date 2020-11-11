@@ -1,0 +1,8 @@
+#john
+#nix:
+copy /etc/shadow, /etc/passwd
+chown /etc/shadow
+unshadow passwd shadow > newfilename
+john newfilename #run on combined unshadowed file; will do default john cracking actions, stepping through each method
+john newfilename --show #show already cracked results; will not show if file has already been cracked otherwise
+asdf
