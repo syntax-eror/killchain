@@ -2,7 +2,11 @@
 #nix:
 copy /etc/shadow, /etc/passwd
 chown /etc/shadow
-unshadow passwd shadow > newfilename
+unshadow passwd shadow > newfilename #unshadow is a jtr utility
+
+cat newfilename | awk -F: '{print $2'}  #use : as delimiter; print second field ($2) which is the password hash for linux systems
+
+
 john newfilename #run on combined unshadowed file; will do default john cracking actions, stepping through each method
 john newfilename --show #show already cracked results; will not show if file has already been cracked otherwise
 
