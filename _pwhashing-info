@@ -7,3 +7,10 @@ $6 - SHA-512
 
 username:$1$5ZeTfMh0$18JdoauJFoaojfoajofOJ:15155:0:99999:7:::
 UI        SALT       HASH                   
+
+
+
+#windows - general
+lanman hashes - aad[#]b - A A D B - indicates this is an empty LANMAN hash - not active account  eg Admin:500:aad3b435b510413eeeeaadb
+NT hashes - dcfed - 21d5cfe0d - indicates this is an empty NT hash - not active account - eg Admin:500:aad3b435b510413eeeeaabetc:21d5cfe0d
+look for hashes that do not have those two patterns: aadb:dcfed
