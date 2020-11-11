@@ -5,6 +5,11 @@ chown /etc/shadow
 unshadow passwd shadow > newfilename
 john newfilename #run on combined unshadowed file; will do default john cracking actions, stepping through each method
 john newfilename --show #show already cracked results; will not show if file has already been cracked otherwise
-asdf
+
+john --list=formats
+
+--show=left --format=md5crypt (etc) newfilename 
+
+--show <newfilename> - how many total have been cracked?
 
 ##hashcat
