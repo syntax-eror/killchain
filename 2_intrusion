@@ -9,6 +9,10 @@ echo Injected| #perl
 
 %00 #this is null value for url-encode
 
+#SQL
+'  "  `  % %% -- /*  // )  ;
+#do any of these values get sanitized?
+
 
 
 #
