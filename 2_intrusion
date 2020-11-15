@@ -4,6 +4,9 @@
 PARAM ; echo Command injected
 echo Injected| #perl
 
+#parameters to check for sanitization
+'';!--"<XSS>=&{()}
+
 
 #example try out on dwva:
 127.0.0.1
