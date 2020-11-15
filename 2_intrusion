@@ -5,7 +5,11 @@ PARAM ; echo Command injected
 echo Injected| #perl
 
 #parameters to check for sanitization
-'';!--"<XSS>=&{()}
+'';!--"<XSS>=&{()} #check to see if this block is accepted; are any characters sanitized?
+
+%00 #this is null value for url-encode
+
+
 
 #
 <script>alert(document.domain);</script>
