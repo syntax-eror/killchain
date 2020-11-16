@@ -12,6 +12,7 @@ echo Injected| #perl
 #SQL
 '  "  `  % %% -- /*  // )  ;
 #do any of these values get sanitized?
+-- #this tells sql db to ignore everything to the right; ex UPDATE table set name ='test'-- WHERE id=xx
 
 
 
