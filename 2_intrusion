@@ -14,6 +14,8 @@ echo Injected| #perl
 #do any of these values get sanitized?
 -- #this tells sql db to ignore everything to the right; ex UPDATE table set name ='test'-- WHERE id=xx
 
+' or '1'='1 #basic test to see if it will dump db
+
 
 
 #
