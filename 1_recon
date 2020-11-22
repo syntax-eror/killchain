@@ -1,0 +1,10 @@
+##1 - REcon##
+
+#OSINT#
+
+Osint ex:
+"index of /" <filename> backup.ab #bk fi for an
+
+file <filname>
+-filetype info displays
+#.ab file is zlib copmressed tar file - 24 byte header
