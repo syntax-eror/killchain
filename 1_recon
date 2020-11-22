@@ -10,3 +10,6 @@ file <filname>
 #.ab file is zlib copmressed tar file - 24 byte header
 dd if=backup.ab of=backup.zlip bs=24 skip=1
 file backup.zlib
+uncompress with zlib library zlib_decomp.py
+tar xvf backup.zlib.out
+
