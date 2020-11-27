@@ -1,9 +1,8 @@
-##1 - REcon##
+==## 1 - RECON ##==
 
-#OSINT#
-
-Osint ex:
-"index of /" <filename> backup.ab #bk fi for an
+--#OSINT#--
+OSINT ex:
+"index of /" <filename> backup.ab #bk fi for android
 
 file <filname>
 -filetype info displays
@@ -13,3 +12,4 @@ file backup.zlib
 uncompress with zlib library zlib_decomp.py
 tar xvf backup.zlib.out
 
+--#PLACEHOLDER#--
