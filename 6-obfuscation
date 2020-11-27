@@ -15,6 +15,12 @@
 
 
 --# win #--
+
+c:\windows\system32\winevt\Logs
+-application.evtx
+-security.evtx
+-system.evtx
+
 #multiple data streams
 defaultFile:secretFile
 c:\ type NTDS.dit > Manual.docx:NTDIS.dit
