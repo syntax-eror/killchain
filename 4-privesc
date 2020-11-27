@@ -1,4 +1,6 @@
-##john
+==## 4 - PRIVESC ##==
+
+--# john #--
 #nix:
 copy /etc/shadow, /etc/passwd
 chown /etc/shadow
@@ -25,10 +27,11 @@ john --format=descrypt --single #single crack mode; uses variation of account na
 
 
 
-##hashcat
+--# hashcat #--
+look for hashes that do not have these two patterns: aadb:dcfed
+=LANMAN hashes=
+aad[#]b - A A D B - indicates this is an empty LANMAN hash - not active account  eg Admin:500:aad3b435b510413eeeeaadb
+#mnemonic device - All Active Directory (is) Bad
 
-
-#windows - general
-lanman hashes - aad[#]b - A A D B - indicates this is an empty LANMAN hash - not active account  eg Admin:500:aad3b435b510413eeeeaadb
-NT hashes - dcfed - 21d5cfe0d - indicates this is an empty NT hash - not active account - eg Admin:500:aad3b435b510413eeeeaabetc:21d5cfe0d
-look for hashes that do not have those two patterns: aadb:dcfed
+NT hashes - D C F E D - 21d5cfe0d - indicates this is an empty NT hash - not active account - eg Admin:500:aad3b435b510413eeeeaabetc:21d5cfe0d
+#mnemonic device - Dumb Crypto Fucks Everything Disastrously
