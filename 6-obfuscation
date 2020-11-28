@@ -27,7 +27,7 @@ c:\ type NTDS.dit > Manual.docx:NTDIS.dit
 PS c:\ Get-Content -Path .\NTDS.dit | Set-Content -Path .\Manual.docx -Stream NTDS.dit
 
 c:\ type c:\tools\nc.exe > test1.txt:nc.exe
-c:\ wmic process call create c:\temp\test1.txt:nc.exe
+c:\ wmic process call create c:\temp\test1.txt:nc.exe #cannot launch exe from data stream directly, need to create process with wmic
 
 dir /r #show add. data streams
 
