@@ -1,6 +1,6 @@
 ==## 6 - OBFUSC ##==
 
---# nix #--
+--# NIX #--
 /var/log/auth.log
 /var/run/utmp #info about currently logged in
 /var/log/wtmp #past user logins
@@ -14,12 +14,18 @@
 - unset HISTFILE; kill -9 $$ #stop updating of bash history file
 
 
---# win #--
+--# WIN #--
 
 c:\windows\system32\winevt\Logs
 -application.evtx
 -security.evtx
 -system.evtx
+
+sc config eventlog start= disabled
+net stop eventlog
+sc query eventlog
+net start eventlog
+
 
 #multiple data streams
 defaultFile:secretFile
