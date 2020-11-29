@@ -1,7 +1,9 @@
 ==## 4 - PRIVESC ##==
 
 --# misconfig systems - nix #--
-sudo -l #what access?
+sudo -l #what access? if you have access to debuggers ex /usr/bin/gdb
+sudo su #it couldn't be that easy
+
 
 --# john - nix #--
 
