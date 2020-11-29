@@ -1,31 +1,25 @@
 ==## 4 - PRIVESC ##==
 
---# john #--
-#nix:
+--# misconfig systems - nix #--
+sudo -l #what access?
+
+--# john - nix #--
+
 copy /etc/shadow, /etc/passwd
 chown /etc/shadow
 unshadow passwd shadow > newfilename #unshadow is a jtr utility
-
 cat newfilename | awk -F: '{print $2'}  #use : as delimiter; print second field ($2) which is the password hash for linux systems
-
 john newfilename #run on combined unshadowed file; will do default john cracking actions, stepping through each method;
 #single, wordlist, then incremental
 john newfilename --show #show already cracked results; will not show if file has already been cracked otherwise
-
 john --list=formats
-
 <newfilename> --show=left --format=md5crypt (etc)
-
 <newfilename> --show - how many total have been cracked?
-
 john --format=descrypt #DES hashes
 john --format=<type, see list with list=formats>
-
 john --format=descrypt --single #single crack mode; uses variation of account name, passwd acct info, etc
 -wordlist filename #use filename as wordlist to dict attack; hybrid with single
 -incremental #brute force
-
-
 
 --# hashcat #--
 look for hashes that do not have these two patterns: aadb:dcfed
