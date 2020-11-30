@@ -12,4 +12,8 @@ file backup.zlib
 uncompress with zlib library zlib_decomp.py
 tar xvf backup.zlib.out
 
+*OSINT RESOURCES*
+https://osintframework.com/ - lists of free resources
+https://namechk.com/ - check usernames
+
 --#PLACEHOLDER#--
