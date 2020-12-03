@@ -13,6 +13,7 @@ uncompress with zlib library zlib_decomp.py
 tar xvf backup.zlib.out
 
 *OSINT RESOURCES*
+12whois.com - reverse whois paid service
 https://osintframework.com/ - lists of free resources
 https://namechk.com/ - check usernames
 
