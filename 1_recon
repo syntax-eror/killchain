@@ -1,6 +1,10 @@
 ==## 1 - RECON ##==
 
 --# OSINT #--
+
+*CERTIFICATE TRANSPARENCY*
+https://transparencyreport.google.com/https/certificates?hl=en
+
 OSINT ex:
 "index of /" <filename> backup.ab #bk fi for android
 
