@@ -38,4 +38,13 @@ viewdns.info - reverse whois and other svcs
 https://xlek.com/ - public info search
 https://tools.dnsstuff.com/
 
---#PLACEHOLDER#--
+
+---------# ACTIVE RECON #-----------
+
+-----------* nmap *-----------
+nmap -A #OS version detection, traceroute
+nmap -sV #service version detection
+nmap -p #specify port -p 1-1024
+nmap --reason #show reason for port status
+nmap -sP #ping scan, only show hosts that are responding to ICMP
+nmap -sT #when root, force to do a TCP connection scan, rather than a half-open SYN scan (half open SYN is default for root)
