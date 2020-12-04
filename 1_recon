@@ -5,6 +5,16 @@
 *CERTIFICATE TRANSPARENCY*
 https://transparencyreport.google.com/https/certificates?hl=en
 
+*DNS ZONE TRANSFER*
+query server to find target <server> name server, then lookup IP (nslookup, host)
+Win:
+nslookup
+> server <server>
+> set type=AXFR
+>ls -d <targetdomain>
+Nix: dig @<server> AXFR <targetserver>
+
+
 OSINT ex:
 "index of /" <filename> backup.ab #bk fi for android
 
