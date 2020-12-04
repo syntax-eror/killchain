@@ -1,7 +1,8 @@
 ==## 1 - RECON ##==
 
---# OSINT #--
+---------# OSINT #-----------
 
+-----------* DNS *-----------
 *CERTIFICATE TRANSPARENCY*
 https://transparencyreport.google.com/https/certificates?hl=en
 
@@ -14,6 +15,9 @@ nslookup
 >ls -d <targetdomain>
 Nix: dig @<server> AXFR <targetserver>
 
+*DNS ACTIVE INTERROGATION*
+sudo nmap --script dns-brute --script-args dns-brute.domain=<domain>dns-brute.threads=2,dns-brute.hostlist=/<file> -sS -p 53
+threads=simultaneous queries
 
 OSINT ex:
 "index of /" <filename> backup.ab #bk fi for android
