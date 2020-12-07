@@ -46,6 +46,14 @@ hashcat -a 3 #brute force mask attack using specified patterns
 hashcat -a 6 #combined hybrid wordlist + mask, append mask to wordlist words
 hashcat -a 7 #6 but pre-pend word
 
+hashcat -a 3 #mask attack; use syntax
+?l - lower
+?u - upper
+?d - digits
+?s - special
+?a - all above
+hashcat -m 1000 -a 0 hashes.txt ?u?l?l?l?l?l?d?d #8 char pw, starts with upper, 5 lowercase in middle, 2 digits
+
 --# MKATX #--
 .\procdump.exe -accepteula -ma lsass.exe lsass.dmp
 mk.exe
