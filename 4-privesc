@@ -15,7 +15,7 @@ cat newfilename | awk -F: '{print $2'}  #use : as delimiter; print second field 
 john newfilename #run on combined unshadowed file; will do default john cracking actions, stepping through each method;
 #single, wordlist, then incremental
 john newfilename --show #show already cracked results; will not show if file has already been cracked otherwise
-john --list=formats
+john --list=formats #show what hash cracking is supported
 <newfilename> --show=left --format=md5crypt (etc)
 <newfilename> --show - how many total have been cracked?
 john --format=descrypt #DES hashes
