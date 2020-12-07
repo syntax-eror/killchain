@@ -40,10 +40,10 @@ hashcat --help | findstr LM
 MD5 mode -m 0
 NTLM mode -m 1000
 NT mode (old LANMAN pws) -m 3000
-hashcat -m 1000 -a 0 hashes.txt words.txt
+hashcat -a 0 -m 1000 hashes.txt words.txt
 #use m 1000 - NTLM use 0 straight attack read from hashes.txt file use words.txt as dict file
 #use --show argument to show which hashes are associated with password cracked
-hashcat -m 1000 -a 0 hashes.txt words.txt --show
+hashcat -a 0 -m 1000hashes.txt words.txt --show
 
 hashcat -a 0 #dictionary wordlist attack
 hashcat -a 1 #dictionary combinator, append each word to every other word using 2 files or 1 file twice
@@ -63,8 +63,9 @@ hashcat -m 1000 -a 6 hashes.txt words.txt ?s?d  #take wordlist file and add mask
 hashcat -m 1000 -a 7 hashes.txt ?s?d? words.txt  #take wordlist and prepend mask
 
 hashcat can also use rules to apply permutations;
-hashcat -m 1000 -a 0 hash.txt words.txt -r best64.rule  #64 permutations of words in wordlsit
-
+hashcat -a 0 -m 1000 hash.txt words.txt -r best64.rule  #64 permutations of words in wordlsit
+#leetspeak is a good rule to try
+hashcat -a 0 -m 1000 -r rules\Incisive-leetspeak.rule hash.txt words.txt #l33tspeak all words in words.txt
 
 --------# MKATX #--------
 .\procdump.exe -accepteula -ma lsass.exe lsass.dmp
