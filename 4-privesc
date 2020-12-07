@@ -22,6 +22,7 @@ john --format=descrypt #DES hashes
 john --format=<type, see list with list=formats>
 john --format=descrypt --single #single crack mode; uses variation of account name, passwd acct info, etc
 -wordlist filename #use filename as wordlist to dict attack; hybrid with single
+#john comes with default wordlist; /usr/local/share/john/password.lst
 -incremental #brute force
 
 -----------# HASHC #-----------
