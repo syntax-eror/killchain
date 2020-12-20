@@ -6,6 +6,11 @@
 /? #win
 PARAM ; echo Command injected
 echo Injected| #perl
+PARAM | echo Test
+PARAM || echo Test
+PARAM & echo Test
+PARAM && echo Test
+$(echo echo Test) #bash
 
 #parameters to check for sanitization
 '';!--"<XSS>=&{()} #check to see if this block is accepted; are any characters sanitized?
