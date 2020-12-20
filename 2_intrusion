@@ -9,7 +9,7 @@ echo Injected| #perl
 PARAM | echo Test
 PARAM || echo Test
 PARAM & echo Test
-PARAM && echo Test
+PARAM && echo Test #&& - run only if param exits successfully
 $(echo echo Test) #bash
 
 #parameters to check for sanitization
