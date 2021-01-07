@@ -12,6 +12,8 @@ wget -q https://raw.githubusercontent.com/yunchih/static-binaries/master/tcpdump
 #windows - no packet capture utilities installed? built in tools can be used like netsh
 netsh trace start capture=yes maxsize=1000 tracefile=<capture>.etl
 netsh trace stop
+#convert to pcap file using tool such as etl2pcapng.exe
+etl2pcapng.exe capture.etl pcap.pcapng
 =======================================================================
 
 -- # MSF #--
@@ -57,4 +59,5 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe
 #netsh for packet capture
 netsh trace start capture=yes maxsize=1000 tracefile=<capture>.etl
 netsh trace stop
-
+#convert to pcap file using tool such as etl2pcapng.exe
+etl2pcapng.exe capture.etl pcap.pcapng
