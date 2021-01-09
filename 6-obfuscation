@@ -1,11 +1,6 @@
 ==## 6 - OBFUSC ##==
 
 --# NIX #--
-/var/log/auth.log
-/var/run/utmp #info about currently logged in
-/var/log/wtmp #past user logins
-/var/log/btmp #failed logins
-/var/log/lastlog #last logins
 
 #bash history
 $HOME/.bash_history
