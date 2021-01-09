@@ -14,6 +14,12 @@ $HOME/.bash_history
 - kill -9 bash
 - unset HISTFILE; kill -9 $$ #stop updating of bash history file
 
+==# UNIX #--
+/var/run/utmp #current logins
+/var/log/wtmp #past logins
+/var/log/btmp #bad logins rarely used
+/var/log/lastlog #login name,port,last login for each user
+
 
 --# WIN #--
 
