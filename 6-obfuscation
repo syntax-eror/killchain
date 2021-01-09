@@ -8,6 +8,7 @@
 /var/log/lastlog #last logins
 
 #bash history
+$HOME/.bash_history
 #3 options for obfusc bash hist:
 - add space before command
 - kill -9 bash
