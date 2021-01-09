@@ -19,6 +19,9 @@ $HOME/.bash_history
 /var/log/wtmp #past logins
 /var/log/btmp #bad logins rarely used
 /var/log/lastlog #login name,port,last login for each user
+#these files are not ASCII text; stored as UTMP structures and need tools to edit:
+#remove.c, wtmpded.c, marry.c, cloak.c,logwedit.c,wzap.c
+#can be found at PacketStorm
 
 
 --# WIN #--
