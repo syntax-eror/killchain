@@ -15,6 +15,8 @@ nslookup
 >ls -d <targetdomain>
 Nix: dig @<server> -t AXFR <targetserver> #-t - specify target (A,X,F,R, or all)
 
+#practice on zonetransfer.me
+
 *DNS ACTIVE INTERROGATION*
 sudo nmap --script dns-brute --script-args dns-brute.domain=<domain>dns-brute.threads=2,dns-brute.hostlist=/<file> -sS -p 53
 threads=simultaneous queries
