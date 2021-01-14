@@ -7,7 +7,8 @@
 https://transparencyreport.google.com/https/certificates?hl=en
 
 *DNS ZONE TRANSFER*
-query server to find target <server> name server, then lookup IP (nslookup, host)
+query server with tool such as whois (viewdns.info or linux tool) to find target <server> name server, then lookup IP (nslookup, host)
+
 Win:
 nslookup
 > server <server>
@@ -16,6 +17,15 @@ nslookup
 Nix: dig @<server> -t AXFR <targetserver> #-t - specify target (A,X,F,R, or all)
 
 #practice on zonetransfer.me
+whois zonetransfer.me
+NS records: nsztm2.digi.ninja, nsztm1.digi.ninja
+Non-authoritative answer:
+Name:    nsztm1.digi.ninja
+Address:  81.4.108.41
+nslookup
+> server 81.4.108.41
+> set type=AXFR
+> ls -d zonetransfer.me
 
 *DNS ACTIVE INTERROGATION*
 sudo nmap --script dns-brute --script-args dns-brute.domain=<domain>dns-brute.threads=2,dns-brute.hostlist=/<file> -sS -p 53
