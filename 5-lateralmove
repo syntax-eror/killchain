@@ -62,3 +62,6 @@ netsh trace start capture=yes maxsize=1000 tracefile=<capture>.etl
 netsh trace stop
 #convert to pcap file using tool such as etl2pcapng.exe
 etl2pcapng.exe capture.etl pcap.pcapng
+
+#netsh for pivoting systems
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=<port> connectaddress=<pivotaddress> connectport=<pivotport> #requires admin
