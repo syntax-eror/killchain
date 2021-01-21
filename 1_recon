@@ -2,6 +2,8 @@
 
 ---------# OSINT #-----------
 
+https://sitereport.netcraft.com/ #lookup public info about site
+
 -----------* DNS *-----------
 *CERTIFICATE TRANSPARENCY*
 https://transparencyreport.google.com/https/certificates?hl=en
@@ -41,6 +43,10 @@ dd if=backup.ab of=backup.zlip bs=24 skip=1
 file backup.zlib
 uncompress with zlib library zlib_decomp.py
 tar xvf backup.zlib.out
+
+*GOOGLE DORKS*
+intext:"not for public distribution" filetype:pdf
+inurl:admin/changepassword*
 
 *OSINT RESOURCES*
 12whois.com - reverse whois paid service
