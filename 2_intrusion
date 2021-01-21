@@ -66,3 +66,5 @@ Test<script>alert(1);</script>
 #this can be replayed with web console access
 #document.cookie='cookiename=cookievalue"
 #curl -b "cookiename=cookievalue" <targetsitepage>
+#can pipe cookie.log file to jq for readability:
+cat cookie.log | jq
