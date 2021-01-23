@@ -11,12 +11,16 @@ https://transparencyreport.google.com/https/certificates?hl=en
 *DNS ZONE TRANSFER*
 query server with tool such as whois (viewdns.info or linux tool) to find target <server> name server, then lookup IP (nslookup, host)
 
-Win:
+#Win#:
 nslookup
 > server <server>
 > set type=AXFR
 >ls -d <targetdomain>
-Nix: dig @<server> -t AXFR <targetserver> #-t - specify target (A,X,F,R, or all)
+
+#Nix#:
+dig @<server> -t AXFR <targetserver> #-t - specify target (A,X,F,R, or all)
+
+host -l zonetransfer.me nsztm1.digi.ninja
 
 #practice on zonetransfer.me
 whois zonetransfer.me
