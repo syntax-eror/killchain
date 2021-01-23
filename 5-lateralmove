@@ -18,12 +18,19 @@ etl2pcapng.exe capture.etl pcap.pcapng
 
 -- # MSF #--
 #ROUTE PIVOTING
-background exisiting meterpreter session
-route add <iprange>/<CIDR>
+background existing meterpreter session
+route add <iprange>/<CIDR> OR <iprange> <subnetmask>
 
 route add 10.10.10.0/24 1 #session 1
+route add 10.10.10.0 255.255.255.0 1 #session 1
 set RHOST <IP in range above>
 exploit #this exploit will be run through the pivot route set up
+
+#for additional recon through pivot, before running other exploits:
+use auxiliary/scanner/portscan/tcp
+set RHOSTS 10.10.10.1-100 #scan 1-100
+set PORTS 80, 443
+run
 
 =======================================================================
 
