@@ -19,7 +19,7 @@ nslookup
 >ls -d <targetdomain>
 
 #Nix#:
-dig @<server> -t AXFR <targetserver> #-t - specify target (A,X,F,R, or all)
+dig @<target-server-nameserver> -t AXFR <targetserver> #-t - specify target (A,X,F,R, or all)
 
 host -l zonetransfer.me nsztm1.digi.ninja
 
